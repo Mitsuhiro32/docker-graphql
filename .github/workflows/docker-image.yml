@@ -37,7 +37,7 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t mitsueiwa32/docker-graphql:$NEW_VERSION.
+        docker build -t mitsueiwa32/docker-graphql:$NEW_VERSION .
         docker build -t mitsueiwa32/docker-graphql:latest .
 
     - name: Push Docker Image
